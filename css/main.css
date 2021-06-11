@@ -1,0 +1,262 @@
+:root{
+    --clr-primary-soft-red: hsl(7, 99%, 70%);
+    --clr-primary-yellow: hsl(51, 100%, 49%);
+    --clr-primary-dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --clr-primary-dark-blue: hsl(198, 62%, 26%);
+    --clr-primary-dark-moderate-cyan: hsl(168, 34%, 41%);
+
+    --clr-neutral-very-dark-desaturated-blue: hsl(32, 10%, 55%);
+    --clr-neutral-very-dark-grayish-blue: hsl(232, 10%, 55%);
+    --clr-neutral-grayish-blue: hsl(210, 4%, 67%);
+    --clr-neutral-white: hsl(0, 0%, 100%)
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+}
+#section1{
+    position: relative;
+    background: url(../images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#navhamburger{
+    display: none !important;
+}
+#mainNav{
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    top: 5vh;
+    position: absolute;
+    width: 100vw;
+    justify-content: space-between;
+}
+#mainNav h3{
+    width: 40%;
+    padding-left: 2.5vw;
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+}
+#navBox{
+    width: 60%;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 6vh;
+}
+.navLinks{
+    padding: 18px 30px;
+    color: white;
+    cursor: pointer;
+}
+.activeLink{
+    border-radius: 30px;
+    background: white;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+}
+#section1Caption{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 25vh;
+    left: 0vh;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+#section1Caption h1{
+    font-size: 54px;
+    font-weight: 900;
+    margin-bottom: 90px;
+}
+
+@media screen and (max-width: 600px) {
+    #section1{
+        background-position: center;
+        padding: 10%;
+    }
+    #navhamburger{
+        display: block !important;
+        height: 25px;
+    }
+    #mainNav h3{
+        font-size: 28px !important;
+        padding-left: 0vw;
+    }
+    #navBox{
+        display: none;
+    }
+    #section1Caption h1{
+        font-size: 34px;
+        letter-spacing: 5px;
+    }
+}
+.sectionSplited{
+    display: flex;
+    flex-basis: 100%;
+}
+
+.sectionSplited div{
+    width: 50%;
+    position: relative;
+}
+.sectionTxt{
+    padding: 7em;
+    color: var(--clr-primary-dark-desaturated-cyan);
+}
+.sectionTxt h3{
+    font-weight: 900;
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+.sectionTxt p{
+    color: var(--clr-primary-dark-moderate-cyan);
+    margin-bottom: 20px;
+}
+.sectionImg{
+    width: 100%;
+}
+.yellowBar{
+    background: var(--clr-primary-yellow);
+    border-radius: 10px;
+    min-height: 10px;
+    margin-top: -8px;
+    width: 105px !important;
+    z-index: -4;
+}
+#section3 .sectionTxt .yellowBar{
+    background: var(--clr-primary-soft-red) !important;
+    background: hsl(7, 99%, 70%);
+    z-index: -4;
+}
+#section4{
+    height: 80vh;
+    text-align: center;
+
+}
+.sectionImg4{
+    width: 100%;
+    position: absolute;
+    inset: 0px;
+    height: 100%;
+    object-fit:none;
+    object-position: left top;
+}
+.sectionTxt4{
+    margin-inline: auto;
+    margin-top: 450px;
+}
+.sectionTxt4 h3{
+    font-size: 22px;
+}
+#testmonials{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 8em;
+    color: var(--clr-primary-dark-moderate-cyan);
+}
+#testmonials h3{
+    text-transform: uppercase;
+    margin-bottom: 4em;
+}
+.singleTestmonial h4{
+    color: var(--clr-primary-dark-desaturated-cyan) !important;
+}
+#testmonials div{
+    display: flex;  
+}
+.singleTestmonial{
+    flex-basis: 30%;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.singleTestmonial img{
+    height: 100px;
+    width: 100px;
+    margin-inline: auto;
+    border-radius: 50%;
+    margin-bottom: 80px;
+}
+.singleTestmonial > *{
+    margin-bottom: 1em;
+}
+
+#portifolio{
+    display: flex;
+    margin-top: 3em;
+    height: 24em;
+    flex-wrap: wrap;
+}
+#portifolio img{
+    width: 25%;
+}
+
+footer{
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--clr-neutral-very-dark-grayish-blue);
+    font-family: 'Barlow', sans-serif;
+}
+footer > * {
+    margin-block: 1em;
+}
+.footerLinks a, .footerSocials a{
+    margin-inline: 1em;
+    font-size: 14px;
+    cursor: pointer;
+}
+.footerActiveAnchor{
+    color: var(--clr-neutral-white);
+}
+
+@media screen and (max-width: 600px) {
+    .sectionSplited div{
+        width: 100%;
+    }
+    .sectionSplited{
+        flex-direction: column;
+    }
+    #section2{
+        flex-direction: column-reverse;
+    }
+    .sectionTxt{
+        text-align: center;
+        padding: 1em;
+    }
+    .yellowBar{
+        margin-inline: auto;
+    }
+    #portifolio img{
+        width: 50%;
+    }
+    #section4{
+        margin-bottom: 40em;
+    }
+    #testmonials div{
+        flex-direction: column;  
+
+    }
+    #testmonials{
+        padding-inline: 1em;
+    }
+    .singleTestmonial{
+        margin-inline: auto;
+    }
+}
